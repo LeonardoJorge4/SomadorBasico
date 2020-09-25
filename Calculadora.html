@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type='number' name='txtn1' id='txtn1'>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type='button' value='Somar' onclick="somar()">
+
+    <div id='res'>Resultado</div>    
+    <script>
+        function somar(){
+            var a = document.getElementById('txtn1')
+            var b = document.querySelector('input#txtn2')
+            var n1 = Number.parseInt(a.value)
+            var n2 = Number.parseInt(b.value)
+            var res = document.getElementById('res')
+            var soma = n1 + n2
+            res.innerHTML = soma
+        }
+    </script>
+</body>
+</html>
